@@ -12,7 +12,6 @@ RSpec.describe '/mechanics', type: :feature do
       mechanic2 = create(:mechanic, years_of_experience: 11)
 
       visit '/mechanics'
-      save_and_open_page
       expect(page).to have_content(mechanic1.name)
       expect(page).to have_content(mechanic1.years_of_experience)
       expect(page).to have_content(mechanic2.name)
